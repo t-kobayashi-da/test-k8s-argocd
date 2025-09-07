@@ -53,12 +53,14 @@ git push
 
 1. ArgoCD UI で **NEW APP**
 
+   * ログインは 03 参照
+
 2. 設定項目
 
    * **Application Name:** `nginx-test`
    * **Project:** `default`
-   * **Repository URL:** 作成した GitHub リポジトリ
-   * **Path:** `manifests`
+   * **Repository URL:** `https://github.com/t-kobayashi-da/test-k8s-argocd.git`
+   * **Path:** `manifests/04_argocd`
    * **Cluster:** `https://kubernetes.default.svc`（local k8s クラスタ）
    * **Namespace:** `default`
    * **Sync Policy:** Manual / Automatic（最初は Manual で確認してから Automatic に切り替え可能）
