@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: argocd-server
-        image: argoproj/argocd:v2.6.15
+        image: ghcr.io/argoproj/argocd:v2.12.13
         ports:
         - containerPort: 8080
 ---
