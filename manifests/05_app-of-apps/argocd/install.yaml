@@ -1,8 +1,10 @@
+# Namespace
 apiVersion: v1
 kind: Namespace
 metadata:
   name: argocd
 ---
+# ArgoCD Server Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -30,6 +32,7 @@ spec:
         ports:
         - containerPort: 8080
 ---
+# ArgoCD Server Service
 apiVersion: v1
 kind: Service
 metadata:
@@ -37,9 +40,9 @@ metadata:
   namespace: argocd
 spec:
   selector:
-    app: argocd-server
+    app.kubernetes.io/name: argocd-server
   ports:
     - protocol: TCP
       port: 443
       targetPort: 8080
-  type:
+  type: ClusterIP
