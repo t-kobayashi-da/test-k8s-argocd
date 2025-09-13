@@ -1,4 +1,4 @@
-apiVersion: arogoprj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: parent-app
@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: manifests/05_app-of-apps
   destination:
-    server: https/kubernetes.default.svc
+    server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated:
